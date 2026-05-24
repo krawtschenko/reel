@@ -1,0 +1,38 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+
+  &.neutral {
+    box-shadow: inset 0 0 0 1px var(--line-subtle);
+    background: var(--bg-canvas);
+    color: var(--fg-secondary);
+  }
+
+  &.accent {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  &.signal {
+    background: var(--signal-soft);
+    color: var(--signal);
+  }
+
+  &.success {
+    background: oklch(from var(--success) l c h / 16%);
+    color: var(--success);
+  }
+
+  &.solid {
+    background: var(--accent);
+    color: var(--fg-on-accent);
+  }
+}

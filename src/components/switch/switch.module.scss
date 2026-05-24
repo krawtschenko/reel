@@ -34,6 +34,11 @@
       background: var(--accent);
     }
 
+    &[data-disabled] {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
     .thumb {
       position: absolute;
       top: 2px;
@@ -56,5 +61,9 @@
     color: var(--fg-secondary);
     font-size: var(--fs-sm);
     user-select: none;
+  }
+
+  &:has([data-disabled]) .label {
+    opacity: 0.45;
   }
 }
