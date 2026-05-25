@@ -13,7 +13,7 @@ type Story = StoryObj<typeof RatingBadge>;
 export const Default: Story = {
   args: {
     value: 9,
-    denom: '/10',
+    denom: '10',
     variant: 'pill',
     dot: true,
   },
