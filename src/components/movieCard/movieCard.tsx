@@ -20,7 +20,7 @@ export const MovieCard = ({ title, year, runtime, rating, saved, featured }: Pro
   return (
     <div className={clsx(styles.card, featured && styles.featured)}>
       <div className={styles.poster}>
-        <PosterImg title={title} />
+        <PosterImg />
 
         <div className={styles.ratingPin}>
           <RatingBadge value={rating} variant="pill" dot={false} />
@@ -50,16 +50,15 @@ export const MovieCard = ({ title, year, runtime, rating, saved, featured }: Pro
   );
 };
 
-const PosterImg = ({ title = '', hue = 56, light = 0.43, light2 = 0.35 }) => (
+export const PosterImg = () => (
   // Abstract painterly placeholder — never a recognizable poster
   <div
     className={styles.posterImg}
     style={{
-      background:
-        `radial-gradient(120% 80% at 30% 20%, oklch(${light + 0.18} 0.08 ${hue}) 0%, transparent 55%),` +
-        `radial-gradient(100% 80% at 80% 90%, oklch(${light2 + 0.08} 0.06 ${(hue + 40) % 360}) 0%, transparent 60%),` +
-        `linear-gradient(180deg, oklch(${light} 0.04 ${hue}) 0%, oklch(${light2} 0.03 ${hue}) 100%)`,
+      background: `radial-gradient(120% 80% at 30% 20%, oklch(0.52 0.08 150) 0%, transparent 55%),
+      radial-gradient(100% 80% at 80% 90%, oklch(0.26 0.06 190) 0%, transparent 60%),
+      linear-gradient(oklch(0.34 0.04 150) 0%, oklch(0.18 0.03 150) 100%)`,
     }}
-    aria-label={title + ' poster placeholder'}
+    aria-label={'poster placeholder'}
   />
 );

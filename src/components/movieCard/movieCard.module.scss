@@ -40,13 +40,6 @@
       box-shadow var(--dur-base) var(--ease-out);
     aspect-ratio: 2 / 3;
 
-    .posterImg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-    }
-
     .ratingPin {
       position: absolute;
       top: var(--sp-3);
@@ -111,4 +104,11 @@
       }
     }
   }
+}
+
+.posterImg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
 }
