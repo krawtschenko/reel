@@ -16,8 +16,8 @@ export const Default: Story = {
     year: 2025,
     runtime: '2h 14m',
     rating: 8.4,
+    featured: true,
   },
-
   render: (args) => (
     <div style={{ width: '300px' }}>
       <MovieCard {...args} />
