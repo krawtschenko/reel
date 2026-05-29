@@ -34,7 +34,7 @@ export const MovieCard = ({ title, year, runtime, rating, saved, featured }: Pro
             Trailer
           </Button>
 
-          <WatchlistButton pressed={saved} compact />
+          <WatchlistButton pressed={saved} compact onDark={true} />
         </div>
       </div>
 
